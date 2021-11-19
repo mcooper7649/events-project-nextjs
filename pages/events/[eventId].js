@@ -5,7 +5,6 @@ import EventContent from "../../components/event-detail/event-content";
 import ErrorAlert from "../../components/ui/error-alert";
 
 import { Fragment } from "react";
-import { getStaticProps } from "..";
 
 function EventDetail(props) {
   const event = props.selectedEvent;
