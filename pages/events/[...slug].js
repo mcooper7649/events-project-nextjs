@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { Fragment, useEffect, useState } from "react";
-import { useSWR } from 'swr';
+import  useSWR  from 'swr';
 
 import { getFilteredEvents } from "../../helpers/api-util";
 import EventList from "../../components/events/event-list";
@@ -23,7 +23,7 @@ useEffect(()=> {
     for (const key in data){
       events.push({
         id: key,
-        ...data.[key],
+        ...data[key],
       })
     }
     setLoadedEvents(events)
