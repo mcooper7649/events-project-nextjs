@@ -3,6 +3,7 @@ export async function getAllEvents() {
     'https://next-js-course-9dc05-default-rtdb.firebaseio.com/events.json'
   );
   const data = await response.json();
+
   const events = [];
 
   for (const key in data) {
@@ -10,8 +11,9 @@ export async function getAllEvents() {
       id: key,
       ...data[key],
     });
-    return events;
   }
+
+  return events;
 }
 
 export async function getFeaturedEvents() {
