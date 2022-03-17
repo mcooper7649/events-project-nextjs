@@ -19,10 +19,13 @@ function AllEventsPage(props) {
   return (
     <Fragment>
       <Head>
+        <title>All my events</title>
+      </Head>
+      <Head>
         <title>All Events</title>
         <meta
-          name="descripton"
-          content="Find upcoming events and activities."
+          name='description'
+          content='Find a lot of great events that allow you to evolve...'
         />
       </Head>
       <EventsSearch onSearch={findEventsHandler} />
@@ -38,7 +41,7 @@ export async function getStaticProps() {
     props: {
       events: events,
     },
-    revalidate: 60,
+    revalidate: 60
   };
 }
 

@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 import useSWR from 'swr';
+import Head from 'next/head';
 
 import { getFilteredEvents } from '../../helpers/api-util';
 import EventList from '../../components/events/event-list';
@@ -37,7 +37,7 @@ function FilteredEventsPage(props) {
   let pageHeadData = (
     <Head>
       <title>Filtered Events</title>
-      <meta name="descripton" content={`A list of filtered events.`} />
+      <meta name="description" content={`A list of filtered events.`} />
     </Head>
   );
 
@@ -60,7 +60,7 @@ function FilteredEventsPage(props) {
     <Head>
       <title>Filtered Events</title>
       <meta
-        name="descripton"
+        name="description"
         content={`All events for ${numMonth}/${numYear}.`}
       />
     </Head>
