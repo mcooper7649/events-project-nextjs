@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import CommentList from './comment-list';
 import NewComment from './new-comment';
@@ -8,7 +8,6 @@ function Comments(props) {
   const { eventId } = props;
 
   const [showComments, setShowComments] = useState(false);
-
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -26,7 +25,6 @@ function Comments(props) {
   }
 
   function addCommentHandler(commentData) {
-    // send data to API
     fetch('/api/comments/' + eventId, {
       method: 'POST',
       body: JSON.stringify(commentData),

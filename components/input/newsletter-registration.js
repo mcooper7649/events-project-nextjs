@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+
 import classes from './newsletter-registration.module.css';
 
 function NewsletterRegistration() {
@@ -26,10 +27,10 @@ function NewsletterRegistration() {
       <form onSubmit={registrationHandler}>
         <div className={classes.control}>
           <input
-            type="email"
-            id="email"
-            placeholder="Your email"
-            aria-label="Your email"
+            type='email'
+            id='email'
+            placeholder='Your email'
+            aria-label='Your email'
             ref={emailInputRef}
           />
           <button>Register</button>
