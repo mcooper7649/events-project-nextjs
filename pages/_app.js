@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
           <title>Next Events</title>
           <meta
             name="title"
-            content="NextJS Events property"
+            content="Networking and Events Finder | NextJS"
             property="og:title"
           />
           <meta name="description" content="Find Events Near You..." />
