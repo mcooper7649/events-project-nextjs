@@ -22,9 +22,8 @@ function MyApp({ Component, pageProps }) {
           />
           <meta
             name="description"
-            content="Find local, remote and digital events today. All built using the NextJS framework. 
-            Meet like minded people without having to wait for horrific page loading speeds and terrible seo for your event. NextJS offers React 
-            functionality with the added bonuses of Server-Side Rendering"
+            property="og:description"
+            content="Find local, remote and digital events today. All built using the NextJS framework. Meet like minded people without having to wait for horrific page loading speeds and terrible seo for your event. NextJS offers React functionality with the added bonuses of Server-Side Rendering"
           />
           <meta
             name="viewport"
