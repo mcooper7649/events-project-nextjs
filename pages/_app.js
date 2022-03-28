@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
           <meta
             name="url"
             property="og:url"
-            content="https://events-project-nextjs-829wf6vkn-mcooper7649.vercel.app/"
+            content="https://events-project-nextjs.vercel.app/"
           />
           <meta name="author" property="og:author" content="Michael Cooper" />
         </Head>
