@@ -1,15 +1,9 @@
 import { MongoClient } from 'mongodb';
 
-const dbusername = process.env.mongodb_username;
-const dbpassword = process.env.mongodb_password;
-const dbconnection = '@cluster0.ewevp.mongodb.net/';
-const dbname = 'nextEvents';
-const dbprefix = 'mongodb+srv://';
+const uri = process.env.MONGODB_URI || 'mongodb://portfolio-mongo:27017/nextEvents';
 
 export async function connectToDatabase() {
-  const client = await MongoClient.connect(
-    `${dbprefix}${dbusername}:${dbpassword}${dbconnection}${dbname}`
-  );
+  const client = await MongoClient.connect(uri, { useUnifiedTopology: true });
 
   return client;
 }

@@ -1,19 +1,17 @@
+import { connectToDatabase } from './db-util';
+import { DUMMY_EVENTS } from '../dummy-data';
+
 export async function getAllEvents() {
-  const response = await fetch(
-    'https://next-js-course-9dc05-default-rtdb.firebaseio.com/events.json'
-  );
-  const data = await response.json();
-
-  const events = [];
-
-  for (const key in data) {
-    events.push({
-      id: key,
-      ...data[key],
-    });
+  let client;
+  try {
+    client = await connectToDatabase();
+    const docs = await client.db().collection('events').find().sort({ date: 1 }).toArray();
+    return docs.map(({ _id, ...event }) => ({ id: _id, ...event }));
+  } catch (error) {
+    return DUMMY_EVENTS;
+  } finally {
+    if (client) client.close();
   }
-
-  return events;
 }
 
 export async function getFeaturedEvents() {
